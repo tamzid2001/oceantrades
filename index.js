@@ -16,7 +16,7 @@ let parser = new Parser();
 const schedule = require('node-schedule');
 
 
-var serviceAccount = require("./oceantrades-624b1-firebase-adminsdk-q3ldh-7f002503b5.json");
+var serviceAccount = require("");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-client.login("OTc5ODk2NjM5NjI2MDUxNjc1.GJYSFe.x0y3jTzFTXIVz0IeugDBWmuQzPmG6P6kEXYljM");
+client.login("");
 
 const dictionary = {
 "EURUSD": "979904100244258826", "GBPUSD": "979966108046065664", "USDJPY": "979966324069511230", 
