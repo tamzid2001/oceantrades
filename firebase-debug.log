@@ -1,0 +1,107 @@
+[debug] [2022-06-04T19:49:14.504Z] ----------------------------------------------------------------------
+[debug] [2022-06-04T19:49:14.506Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\tamzi\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-06-04T19:49:14.507Z] CLI Version:   11.0.1
+[debug] [2022-06-04T19:49:14.507Z] Platform:      win32
+[debug] [2022-06-04T19:49:14.507Z] Node Version:  v16.13.1
+[debug] [2022-06-04T19:49:14.508Z] Time:          Sat Jun 04 2022 15:49:14 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-06-04T19:49:14.509Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-06-04T19:49:14.596Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-06-04T19:49:14.596Z] > authorizing via signed-in user (oceantradescommunity@gmail.com)
+[debug] [2022-06-04T19:49:14.596Z] [iam] checking project oceantrades-624b1 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-06-04T19:49:14.599Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/oceantrades-624b1:testIamPermissions [none]
+[debug] [2022-06-04T19:49:14.600Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/oceantrades-624b1:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-04T19:49:14.891Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/oceantrades-624b1:testIamPermissions 200
+[debug] [2022-06-04T19:49:14.891Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/oceantrades-624b1:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-04T19:49:14.892Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/oceantrades-624b1/serviceAccounts/oceantrades-624b1@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-06-04T19:49:14.892Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/oceantrades-624b1/serviceAccounts/oceantrades-624b1@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-06-04T19:49:15.131Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/oceantrades-624b1/serviceAccounts/oceantrades-624b1@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-06-04T19:49:15.132Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/oceantrades-624b1/serviceAccounts/oceantrades-624b1@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-06-04T19:49:15.134Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/oceantrades-624b1 [none]
+[debug] [2022-06-04T19:49:15.471Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/oceantrades-624b1 200
+[debug] [2022-06-04T19:49:15.471Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/oceantrades-624b1 {"projectId":"oceantrades-624b1","projectNumber":"694970883112","displayName":"oceantrades","name":"projects/oceantrades-624b1","resources":{"hostingSite":"oceantrades-624b1","storageBucket":"oceantrades-624b1.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'oceantrades-624b1'...
+[info] 
+[info] i  deploying firestore, functions, hosting 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2022-06-04T19:49:15.480Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/oceantrades-624b1:test [none]
+[debug] [2022-06-04T19:49:15.480Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/oceantrades-624b1:test [omitted]
+[debug] [2022-06-04T19:49:15.689Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/oceantrades-624b1:test 200
+[debug] [2022-06-04T19:49:15.690Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/oceantrades-624b1:test {}
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2022-06-04T19:49:15.695Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/oceantrades-624b1 [none]
+[debug] [2022-06-04T19:49:15.948Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/oceantrades-624b1 200
+[debug] [2022-06-04T19:49:15.948Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/oceantrades-624b1 {"projectId":"oceantrades-624b1","projectNumber":"694970883112","displayName":"oceantrades","name":"projects/oceantrades-624b1","resources":{"hostingSite":"oceantrades-624b1","storageBucket":"oceantrades-624b1.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2022-06-04T19:49:15.952Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/oceantrades-624b1/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-06-04T19:49:15.954Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/oceantrades-624b1/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-06-04T19:49:15.955Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/oceantrades-624b1/services/cloudbuild.googleapis.com [none]
+[debug] [2022-06-04T19:49:15.957Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/oceantrades-624b1/services/artifactregistry.googleapis.com [none]
+[debug] [2022-06-04T19:49:16.395Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/oceantrades-624b1/services/runtimeconfig.googleapis.com 200
+[debug] [2022-06-04T19:49:16.395Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/oceantrades-624b1/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-06-04T19:49:16.397Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/oceantrades-624b1/services/cloudfunctions.googleapis.com 200
+[debug] [2022-06-04T19:49:16.398Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/oceantrades-624b1/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2022-06-04T19:49:16.402Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/oceantrades-624b1/services/artifactregistry.googleapis.com 200
+[debug] [2022-06-04T19:49:16.402Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/oceantrades-624b1/services/artifactregistry.googleapis.com [omitted]
+[debug] [2022-06-04T19:49:16.417Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/oceantrades-624b1/services/cloudbuild.googleapis.com 200
+[debug] [2022-06-04T19:49:16.417Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/oceantrades-624b1/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2022-06-04T19:49:16.419Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/oceantrades-624b1/adminSdkConfig [none]
+[debug] [2022-06-04T19:49:16.731Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/oceantrades-624b1/adminSdkConfig 200
+[debug] [2022-06-04T19:49:16.732Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/oceantrades-624b1/adminSdkConfig {"projectId":"oceantrades-624b1","storageBucket":"oceantrades-624b1.appspot.com","locationId":"us-central"}
+[debug] [2022-06-04T19:49:16.736Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/oceantrades-624b1/configs [none]
+[debug] [2022-06-04T19:49:17.032Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/oceantrades-624b1/configs 200
+[debug] [2022-06-04T19:49:17.033Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/oceantrades-624b1/configs {}
+[info] i  functions: preparing codebase default for deployment 
+[debug] [2022-06-04T19:49:17.048Z] Validating nodejs source
+[debug] [2022-06-04T19:49:21.023Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "csurf": "^1.11.0",
+    "discord.js": "^13.7.0",
+    "firebase-admin": "^10.2.0",
+    "firebase-functions": "^3.21.2",
+    "nodemailer": "^6.7.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-06-04T19:49:21.023Z] Building nodejs source
+[debug] [2022-06-04T19:49:21.024Z] Analyzing nodejs backend spec
+[debug] [2022-06-04T19:49:21.026Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-06-04T19:49:21.494Z] Serving at port 9005
+
+[debug] [2022-06-04T19:49:22.883Z] FetchError: request to http://localhost:9005/__/quitquitquit failed, reason: connect ECONNREFUSED 127.0.0.1:9005
+    at ClientRequest.<anonymous> (C:\Users\tamzi\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1491:11)
+    at ClientRequest.emit (node:events:390:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at Socket.socketErrorListener (node:_http_client:447:9)
+    at Socket.emit (node:events:390:28)
+    at Socket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: An unexpected error has occurred.
