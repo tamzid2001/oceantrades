@@ -1,3 +1,5 @@
-# oceantrades
+# oceantrades (2022)
 
-send trading signals to discord
+OceanTrades Website: oceantrades.org
+
+index.js: send trading signals to discord
