@@ -1,5 +1,7 @@
 # oceantrades (2022)
 
-OceanTrades Website: oceantrades.org
+Signal API
 
-index.js: send trading signals to discord
+index.js: send trading signals from MT4 to discord
+
+
